@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>homeWork1</title>
+</head>
+<body>
+
+<div id="book"></div>
+<div id="band"></div>
+<div id="recipe"></div>
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+    // Задание 1
+    const bookStyle = {
+        maxWidth: '415px',
+        border: '1px solid #ccc',
+        padding: '10px',
+        margin: 'auto',
+        borderRadius: '8px',
+        backgroundColor: '#f9f9f9',
+        textAlign: 'center'
+    };
+
+    const imageStyle = {
+        width: '100%',
+        maxWidth: '90%',
+        borderRadius: '8px',
+        margin: '10px 10px',
+        textAlign: 'center'
+    };
+
+    const BookInfo = () => (
+
+        <div style={bookStyle}>
+            <h1>Задание 1:<br/>Информация о книге</h1>
+            <h2>Информация о книге</h2>
+            <p>Название книги: Мысли как математик</p>
+            <div>
+                <img src="img/3.jpg" alt="bookCover" style={imageStyle}/>
+            </div>
+        </div>
+    );
+
+    ReactDOM.createRoot(document.getElementById('book')).render(<BookInfo/>);
+
+    // Задание 2
+    const bandStyle = {
+        maxWidth: '415px',
+        border: '1px solid #ccc',
+        padding: '10px',
+        margin: '50px auto',
+        borderRadius: '8px',
+        backgroundColor: '#f9f9f9',
+        textAlign: 'center'
+    };
+
+    const imageStyleAlbum = {
+        width: '100%',
+        maxWidth: '300px',
+        maxHeight: '300px',
+        borderRadius: '8px',
+        margin: 'auto'
+    };
+
+    const BandInfo = () => (
+        <div style={bandStyle}>
+            <h1>Задание 2:<br/>Информация о музыкальной группе</h1>
+            <h2>Информация о музыкальной группе</h2>
+            <p>Название группы: Eminem</p>
+            <div>
+                <h3>Участники группы:</h3>
+                <p>Eminem</p>
+            </div>
+            <div>
+                <img src="img/2.jpg" alt="" style={imageStyleAlbum}/>
+            </div>
+        </div>
+    );
+
+    ReactDOM.createRoot(document.getElementById('band')).render(<BandInfo/>);
+
+    // Задание 3
+    const recipeStyle = {
+        maxWidth: '415px',
+        border: '1px solid #ccc',
+        padding: '10px',
+        margin: 'auto',
+        borderRadius: '8px',
+        backgroundColor: '#f9f9f9'
+    };
+
+    const recipeStyleDiv = {
+        margin: 'auto',
+        textAlign: 'center'
+    };
+
+    const RecipeInfo = () => (
+        <div style={recipeStyle}>
+            <h1>Задание 3:<br/>Информация о рецепте</h1>
+            <h2>Информация о рецепте</h2>
+            <p>Название рецепта: Пельмени</p>
+            <div>
+                <h3>Ингредиенты:</h3>
+                <p>Пельмени - 1 кг</p>
+            </div>
+            <div>
+                <h3>Последовательность приготовления:</h3>
+                <p>1. Отварить пельмени до готовности.</p>
+                <p>2. Добавить зелени.</p>
+                <p>3. Съесть.</p>
+            </div>
+            <div style={recipeStyleDiv}>
+                <img src="img/1.jpg" style={imageStyle}/>
+            </div>
+        </div>
+    );
+
+    ReactDOM.createRoot(document.getElementById('recipe')).render(<RecipeInfo/>);
+
+</script>
+</body>
+</html>
